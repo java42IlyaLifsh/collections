@@ -1,5 +1,5 @@
 package telran.util;
-
+//HW_24
 /**
  * 
  * all specified below methods should be written with complexity O[1] 
