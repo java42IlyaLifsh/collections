@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Stack;
 
-//HW_24 IlyL
+//HW_26 IlyL
 /**
  * 
  * all specified below methods should be written with complexity O[1] 

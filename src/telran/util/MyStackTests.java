@@ -1,5 +1,5 @@
 package telran.util;
-//HW_24 IlyaL
+//HW_26 IlyaL
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Collections;
