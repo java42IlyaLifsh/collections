@@ -1,40 +1,68 @@
 package telran.util;
-//HW_24
+
+import java.util.ArrayList;
+import java.util.NoSuchElementException;
+import java.util.Stack;
+
+//HW_24 IlyL
 /**
  * 
  * all specified below methods should be written with complexity O[1] 
  *
  */
 public class MyStack {
-//TODO fields
-	/*
-	 * removes the last element and returns it
-	 * if the stack is empty an exception "NoSuchElementException" should be thrown
-	 */
+	
+
+	
+	private Stack <Integer> stack = new Stack<>();
+ 
+	private Stack<Integer> maxElements = new Stack<>();
+	
+	
+
 	Integer pop () {
-		//TODO
-		return null;
+	
+				if (stack.isEmpty()) {
+					throw new NoSuchElementException();
+				}
+				int res = stack.pop();
+				int resMaxElements=maxElements.pop();
+				
+				return res;
+
 	}
 	/**
 	 * 
 	 * @return true it the stack is empty
 	 */
 	boolean isEmpty() {
-		//TODO
-		return false;
+		 
+		return stack.isEmpty();
 	}
 	/**
 	 * adds the given element at the end of the stack
 	 * @param element
 	 */
 	void push(Integer element) {
-		//TODO
+		
+			
+				stack.push(element);
+				
+			 
+				if (maxElements.isEmpty() || element >= maxElements.peek()) {
+					maxElements.push(element);
+				} else { maxElements.push(maxElements.peek());}
+ 
 	}
 	/**
 	 * 
 	 * @return maximal element existing in the stack
 	 */
 	Integer max() {
-		return null;
+		 
+		if (maxElements.isEmpty()) {
+			throw new NoSuchElementException();
+		}
+		return maxElements.peek();
 	}
 }
